@@ -39,14 +39,18 @@ function AuthProvider({ children, ...props }: Props) {
     }
 
     const updateSignUpProfile = (name: string, image: string) => {
-        return updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: image
-        })
+        if (auth.currentUser) {
+            return updateProfile((auth.currentUser), {
+                displayName: name,
+                photoURL: image
+            })
+        }
     }
 
     const verifyEmail = () => {
-        return sendEmailVerification(auth.currentUser)
+        if (auth.currentUser) {
+            return sendEmailVerification(auth.currentUser)
+        }
     }
 
     const signInUser = (email: string, password: string) => {
