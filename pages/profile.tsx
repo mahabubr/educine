@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 
-function profile() {
+function Profile() {
 
     const { user }: any = useContext(AuthContext)
 
@@ -53,4 +53,4 @@ function profile() {
     );
 }
 
-export default profile;
+export default Profile;

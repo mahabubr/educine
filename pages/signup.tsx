@@ -9,7 +9,7 @@ import { AuthContext } from "../contexts/AuthProvider";
 import { FaFacebook, FaGithub, FaGoogle, FaYahoo } from 'react-icons/fa';
 
 
-function signup() {
+function SignUp() {
 
     const {
         signUp,
@@ -127,4 +127,4 @@ function signup() {
     );
 }
 
-export default signup;
+export default SignUp;

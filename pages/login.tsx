@@ -10,7 +10,7 @@ import { AuthContext } from '../contexts/AuthProvider';
 import { FaFacebook, FaGithub, FaGoogle, FaYahoo } from 'react-icons/fa';
 
 
-function login() {
+function Login() {
 
     const {
         signInUser,
@@ -106,4 +106,4 @@ function login() {
     );
 }
 
-export default login;
+export default Login;

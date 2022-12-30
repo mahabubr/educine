@@ -7,18 +7,16 @@ import { CiTimer } from 'react-icons/ci';
 import Link from 'next/link';
 import { toast } from 'react-hot-toast';
 import { useContext, useRef } from 'react';
-import Pdf from "react-to-pdf"
-import { AuthContext } from '../../contexts/AuthProvider';
-import { useRouter } from 'next/router';
+// import Pdf from "react-to-pdf"
 
 
 
-function categoryId({ data }: any) {
+function CategoryId({ data }: any) {
 
     const { name, image, id, video, quiz, live_class, support, duration, review, teachers, description } = data
     const { teacher_name, teacher_img, teacher_title } = teachers
 
-    const ref = useRef()
+    // const ref = useRef()
 
     const options = {
         orientation: 'portrait',
@@ -29,7 +27,7 @@ function categoryId({ data }: any) {
 
     return (
         <div className='mb-24'>
-            <div ref={ref} className='lg:flex lg:w-9/12 mx-auto flex-row-reverse items-start justify-center lg:mt-12'>
+            <div className='lg:flex lg:w-9/12 mx-auto flex-row-reverse items-start justify-center lg:mt-12'>
                 <div className='lg:w-6/12 p-12'>
                     <h1 className='text-3xl font-bold text-pink-500 mb-6 text-justify'>
                         Professional {name} Course.
@@ -152,7 +150,7 @@ function categoryId({ data }: any) {
                     </div>
                 </div>
                 <div className='lg:w-6/12 sticky top-24'>
-                    <div className='mb-6 text-center w-10/12 mx-auto'>
+                    {/* <div className='mb-6 text-center w-10/12 mx-auto'>
                         <Pdf
                             targetRef={ref}
                             filename="example.pdf"
@@ -165,7 +163,7 @@ function categoryId({ data }: any) {
                                     <p>Download PDF</p>
                                 </button>}
                         </Pdf>
-                    </div>
+                    </div> */}
                     <img className='rounded-2xl border-4 border-blue-400' src={image} alt="" />
                     <Link href={`/checkout/${id}`}>
                         <button className="btn btn-outline btn-primary mt-6 w-full text-xl">
@@ -212,4 +210,4 @@ export const getStaticPaths = async () => {
 }
 
 
-export default categoryId;
+export default CategoryId;

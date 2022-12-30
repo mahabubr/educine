@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../contexts/AuthProvider";
 
-function checkoutId({ data }: any) {
+function CheckoutId({ data }: any) {
 
     const { name, image, description } = data
 
@@ -72,4 +72,4 @@ export const getStaticPaths = async () => {
     }
 }
 
-export default checkoutId;
+export default CheckoutId;
